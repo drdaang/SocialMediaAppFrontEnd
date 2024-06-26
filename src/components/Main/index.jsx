@@ -9,6 +9,8 @@ import Lottie from "lottie-react";
 import animationData from "./spinner2.json";
 import ParticlesComponent from "./particles";
 
+const API_BASE_URL = "https://social-media-app-backend-rho.vercel.app";
+
 const Main = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -40,7 +42,7 @@ const Main = () => {
         return;
       }
 
-      const res = await axios.get("http://localhost:3000/", {
+      const res = await axios.get(`${API_BASE_URL}/`, {
         params: { page, size: LIMIT },
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -117,7 +119,7 @@ const Main = () => {
         return;
       }
 
-      const res = await axios.post("http://localhost:3000/upload", formDataToSend, {
+      const res = await axios.post(`${API_BASE_URL}/upload`, formDataToSend, {
         headers: { Authorization: `Bearer ${token}`, "Content-Type": "multipart/form-data" },
       });
 
