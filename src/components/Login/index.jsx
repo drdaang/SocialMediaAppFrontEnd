@@ -18,7 +18,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:3000/login";
+      const url = "https://social-media-app-backend-rho.vercel.app";
       const res = await axios.post(url, data);
       const { token, user } = res.data;
       
