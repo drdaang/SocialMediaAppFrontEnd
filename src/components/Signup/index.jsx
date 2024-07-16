@@ -25,7 +25,7 @@ const Signup = () => {
         e.preventDefault();
         try
         { 
-            const url = "https://social-media-app-backend-rho.vercel.app/signup";
+            const url = "https://socialmediaappbackend-5sib.onrender.com/signup";
             const res  = await axios.post(url, data);
             navigate("/login")
             console.log(res.message);
