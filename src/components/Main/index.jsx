@@ -9,7 +9,7 @@ import Lottie from "lottie-react";
 import animationData from "./spinner2.json";
 import ParticlesComponent from "./particles";
 
-const API_BASE_URL = "https://social-media-app-backend-rho.vercel.app";
+const API_BASE_URL = "https://socialmediaappbackend-5sib.onrender.com";
 
 const Main = () => {
   const navigate = useNavigate();
@@ -25,7 +25,6 @@ const Main = () => {
   const [formVisible, setFormVisible] = useState(false);
 
   useEffect(() => {
-    // Check for token in localStorage
     const token = localStorage.getItem("token");
     if (!token) {
       navigate("/login");
