@@ -18,7 +18,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "https://social-media-app-backend-rho.vercel.app";
+      const url = "https://socialmediaappbackend-5sib.onrender.com";
       const res = await axios.post(url, data);
       const { token, user } = res.data;
       
