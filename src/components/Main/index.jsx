@@ -23,7 +23,7 @@ const Main = () => {
   const [total, setTotal] = useState(0);
 
   const [formVisible, setFormVisible] = useState(false);
-
+  
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
@@ -31,7 +31,7 @@ const Main = () => {
     } else {
       fetchImages(activePage);
     }
-  }, [activePage, navigate]);
+  }, [activePage]);
 
   const fetchImages = async (page) => {
     try {
