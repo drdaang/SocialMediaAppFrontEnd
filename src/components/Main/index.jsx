@@ -31,7 +31,7 @@ const Main = () => {
     } else {
       fetchImages(activePage);
     }
-  }, [activePage]);
+  }, []);
 
   const fetchImages = async (page) => {
     try {
